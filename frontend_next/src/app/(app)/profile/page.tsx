@@ -2,17 +2,19 @@
 
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { MyComponent } from '../../../hooks/MyComponent'; // 确保路径正确
+// import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+// import { QueryClient } from '@tanstack/react-query';
+import { MyComponent } from '../../../hooks/profilesHook'; // 确保路径正确
 
-const queryClient = new QueryClient();
+// const queryClient = new QueryClient();
 
 
 function App() {
   useEffect(() => {
     const rootElement = document.getElementById('root');
     if (rootElement) {
-      const root = ReactDOM.createRoot(rootElement as HTMLElement);
+      // const root = ReactDOM.createRoot(rootElement as HTMLElement);
+      const root = ReactDOM.createRoot(rootElement);
       root.render(<MyComponent />);
     }
   }, []); // 空依赖数组，确保只在客户端执行一次
